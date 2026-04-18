@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pelucas Caninas | Tu Veterinaria de confianza</title>
+  <meta name="description" content="Descubre la mejor veterinaria para tu mascota. Servicios de calidad y atención personalizada." />
+  <style>
+    * { 
+      margin: 0; 
+      padding: 0;
+      box-sizing: border-box; /* Para que el padding no afecte el tamaño total de los elementos */
+    }
+    body {
+      font-family: Arial, sans-serif; /* Fuente moderna y legible */
+      padding-top: 70px; /* Para evitar que el contenido quede oculto detrás de la barra de navegación */
+    }
+    nav {
+      position: fixed; /* Hace que la barra de navegación se quede fija en la parte superior */
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 70px; 
+      background-color: #ffffff; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      padding: 0 40px; 
+      border-bottom: 1px solid #e0e0e0; 
+      z-index: 1000; 
+    }
+     nav nav {
+      display: flex; /* Para alinear los enlaces de navegación horizontalmente */
+      gap: 30px; 
+      position: static; 
+      height: auto; 
+      border: none; 
+      padding: 0; 
+      width: auto; 
+    }
+     nav nav a { /* Estilos para los enlaces de navegación */
+      text-decoration: none; 
+      color: #333; 
+      font-size: 15px; 
+    }
+    nav nav a:hover { /* Estilos para los enlaces de navegación al pasar el mouse por encima */
+      color: #2d7a5f; /* Color de texto para los enlaces de navegación al pasar el mouse por encima */
+    }
+    .btn-nav { /* Estilos para el botón de inicio de sesión dentro de la barra de navegación */
+      background-color: #2d7a5f;
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 25px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-nav:hover { /* Estilos para el botón de inicio de sesión al pasar el mouse por encima */
+      background-color: #235f49;
+    }
+
+    /* SECCIÓN VERDE  */
+    .seccion-verde { /* Estilos para la sección verde (inicio) */
+      background-image: url('../img/PelucasCaninas.png'); /* Imagen de fondo para la sección verde */
+      background-size: 100% 100%;
+      background-position: center; /* Para centrar la imagen de fondo */
+      background-repeat: no-repeat; /* Para evitar que la imagen de fondo se repita */
+      position: relative; /* Para posicionar los elementos dentro de la sección verde */
+      color: #ffffff;
+      padding: 100px 100px;
+    }
+    /* Capa verde semitransparente encima de la imagen */
+    .seccion-verde::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(45, 122, 95, 0.75);
+      z-index: 0;
+    }
+    /* Todo el contenido encima de la capa */
+    .seccion-verde > * {
+      position: relative;
+      z-index: 1;
+    }
+    .badge {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    .seccion-verde h1 {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 650px;
+      margin-bottom: 20px;
+    }
+    .seccion-verde h1 span {
+      color: #d4a030; /* Color amarillo para resaltar el nombre de la veterinaria */
+    }
+    .seccion-verde p { /* Estilos para el párrafo dentro de la sección verde */
+      font-size: 17px;
+      max-width: 580px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      color: rgba(255, 255, 255, 0.85);
+      text-align: justify;
+    }
+    .botones { /* Estilos para el contenedor de los botones dentro de la sección verde */
+      display: flex;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+    .btn-amarillo { /* Estilos para el botón amarillo dentro de la sección verde */
+      background-color: #d4a030;
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .btn-blanco { /* Estilos para el botón blanco dentro de la sección verde */
+      background-color: transparent;
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    .estadisticas { /* Estilos para el contenedor de las estadísticas dentro de la sección verde */
+      display: flex;
+      gap: 60px;
+    }
+    .estadisticas div div:first-child { /* Estilos para el número dentro de cada estadística */
+      font-size: 22px;
+      font-weight: 800;
+      text-align: center;
+    }
+    .estadisticas div div:last-child { /* Estilos para la descripción dentro de cada estadística */
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+    }
+    /* SECCIÓN BLANCA  */
+    .seccion-blanca { /* Estilos para la sección blanca (agendar cita) */
+      background-color: #ffffff; 
+      color: #1a1a1a; 
+      padding: 80px; 
+      text-align: center; 
+    }
+    .seccion-blanca h2 { /* Estilos para el título dentro de la sección blanca */
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .subtitulo { /* Estilos para el subtítulo dentro de la sección blanca */
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    .seccion-blanca label { /* Estilos para las etiquetas de los campos del formulario dentro de la sección blanca */
+      display: block; 
+      font-size: 14px; 
+      color: #444; 
+      font-weight: 600; 
+      margin-top: 12px; 
+      margin-bottom: 4px; 
+      text-align: left; 
+      max-width: 480px; 
+      margin-left: auto; 
+      margin-right: auto; 
+    }
+    .seccion-blanca input, /* Estilos para los campos de entrada del formulario dentro de la sección blanca */
+    .seccion-blanca select, /* Estilos para los campos de selección del formulario dentro de la sección blanca */
+    .seccion-blanca textarea { /* Estilos para los campos de texto del formulario dentro de la sección blanca */
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: 'Segoe UI', sans-serif;
+      color: #1a1a1a;
+      background-color: #fafafa;
+    }
+    .seccion-blanca input:focus, /* Estilos para los campos de entrada del formulario al recibir el foco dentro de la sección blanca */
+    .seccion-blanca select:focus, /* Estilos para los campos de selección del formulario al recibir el foco dentro de la sección blanca */
+    .seccion-blanca textarea:focus { /* Estilos para los campos de texto del formulario al recibir el foco dentro de la sección blanca */
+      outline: none;
+      border-color: #2d7a5f;
+    }
+    .btn-enviar { /* Estilos para el botón de enviar dentro de la sección blanca */
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      margin: 20px auto 0;
+      background-color: #d4a030;
+      color: #ffffff;
+      padding: 14px;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-enviar:hover { /* Estilos para el botón de enviar al pasar el mouse por encima dentro de la sección blanca */
+      background-color: #b8891f;
+    }
+ 
+    /* GALERÍA */
+    .galeria { /* Estilos para la sección de galería de mascotas */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      padding: 40px;
+      background-color: #c8e6c9;
+    }
+    .galeria img { /* Estilos para las imágenes dentro de la galería de mascotas */
+      width: 200px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .galeria h2 { /* Estilos para el título dentro de la sección de galería de mascotas */
+      width: 100%;
+      font-size: 28px;
+      font-weight: 700;
+      color: #2d7a5f;
+      margin-bottom: 16px;
+    }
+ 
+    /* FOOTER */
+    footer { /* Estilos para el pie de página */
+      background-color: #111;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      padding: 24px 40px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+  </style>
+</head>
+<body>
+ 
+  <!-- NAV — sin imagen del logo -->
+  <nav>
+    <div class="logo">Pelucas Caninas</div>
+    <nav>
+      <a href="">Inicio</a>
+      <a href="">Servicios</a>
+      <a href="">Catalogo</a>
+    </nav>
+    <button class="btn-nav">Agendar Cita</button>
+  </nav>
+
+  <!-- SECCIÓN 1 — imagen de fondo -->
+  <section class="seccion-verde">
+    <div class="badge">Tu veterinaria de confianza</div>
+    <h1>
+      Bienvenido a <span>Pelucas Caninas</span>
+    </h1>
+    <p>
+      Salón especializado en estética canina, realizamos baños y cortes de raza de acuerdo 
+      a la estructura y pelaje de tu mascota. Usamos productos de excelente calidad que nos permiten realzar la belleza de tu mascota.
+    </p>
+    <div class="botones">
+      <a href="#agendar" class="btn-amarillo">Agendar Cita Ahora</a>
+      <a href="#" class="btn-blanco">Ver Servicios</a>
+    </div>
+    <div class="estadisticas">
+      <div>
+        <div>500+</div>
+        <div>Mascotas felices</div>
+      </div>
+      <div>
+        <div>24/7</div>
+        <div>Emergencias</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Agendar Cita -->
+  <section class="seccion-blanca" id="agendar">
+    <h2>Agendar Cita</h2>
+    <p class="subtitulo">Completa el formulario y nos pondremos en contacto contigo</p>
+    <div class="formulario">
+      <label>Nombre del dueño</label>
+      <input type="text" placeholder="Ingrese su nombre" required />
+ 
+      <label>Nombre de la mascota</label>
+      <input type="text" placeholder="Nombre de tu mascota" required />
+ 
+      <label>Tipo de mascota</label>
+      <select required>
+        <option value="">Selecciona una opción</option>
+        <option>Perro</option>
+        <option>Gato</option>
+        <option>Conejo</option>
+        <option>Otro</option>
+      </select>
+
+      <label>Fecha de la cita</label>
+      <input type="date" required />
+
+      <label>Hora de la cita</label>
+      <input type="time" required />
+ 
+      <label>Teléfono de contacto</label>
+      <input type="tel" placeholder="Su número de teléfono" required />
+ 
+      <label>Comentarios</label>
+      <textarea rows="5" placeholder="Ingrese cualquier comentario adicional" required></textarea>
+ 
+      <button class="btn-enviar">Confirmar Cita</button>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section class="galeria">
+    <h2>Nuestros peludos consentidos</h2>
+    <img src="../img/Bianca.jpg" alt="Mascota 1" />
+    <img src="../img/Candy.jpg" alt="Mascota 2" />
+    <img src="../img/Goku.jpg" alt="Mascota 3" />
+    <img src="../img/Linda.jpg" alt="Mascota 4" />
+    <img src="../img/Lunita.jpg" alt="Mascota 5" />
+    <img src="../img/Manuel.jpg" alt="Mascota 6" />
+    <img src="../img/Max.jpg" alt="Mascota 7" />
+    <img src="../img/Pelusa.jpg" alt="Mascota 8" />
+    <img src="../img/Valentino.jpg" alt="Mascota 9" />
+    <img src="../img/Willow y su hijo.jpg" alt="Mascota 10" />
+  </section>
+
+  <!-- Mapa -->
+  <main>
+    <section>
+      <h2>Veterinaria en San Juan de Lurigancho: <br>
+          Siempre cerca de ti y tu mascota</h2>
+      <iframe src="" frameborder="0"></iframe>
+    </section>
+  </main>
+
+  <!-- Derechos Reservados -->
+  <footer>
+    <p>Derechos Reservados: &copy; Grupo 4 del curso de Taller de Programación Web
+      de la Universidad Tecnológica del Perú. 
+  </footer>
+
+  
+</body>
+</html>

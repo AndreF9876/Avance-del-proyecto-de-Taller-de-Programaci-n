@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulario de Registro</h2>
+    <form action="">
+        <fieldset>Capitulo 1 <br><br>
+        <!--Texto-->
+        <label>Nombre Completo:</label><br>
+        <input type="text" placeholder=" Ingrese su nombre" required><br><br>
+        <!--Email-->
+        <label>Correo Electrónico:</label> <br>
+        <input type="email" placeholder="Ingrese su correo electrónico" required><br><br>
+        <!--Contraseña-->
+        <label>Contraseña:</label><br>
+        <input type="password" placeholder="Ingrese su contraseña" required><br><br>
+        </fieldset>
+        <!--Número-->
+        <label>Edad:</label><br>
+        <input type="number" min="1" max="100" placeholder="Ingrese su edad" required><br><br>
+        <!--Fecha-->
+        <label>Fecha de Nacimiento:</label><br>
+        <input type="date" required><br><br>
+        <!--Teléfono-->
+        <label>Teléfono:</label><br>
+        <input type="tel" placeholder="+51 999 999 999" required><br><br>
+        <!--Radio-->
+        <label>Género:</label><br>
+        <input type="radio" name="genero" value="masculino" required> Masculino<br>
+        <input type="radio" name="genero" value="femenino" required> Femenino<br>
+        <input type="radio" name="genero" value="otro" required> Otro<br><br>
+        <!--Checkbox-->
+        <label>Intereses:</label><br>
+        <input type="checkbox" name="checkbox" value="deportes"> Programación<br>
+        <input type="checkbox" name="checkbox" value="musica"> Taller Web<br>
+        <input type="checkbox" name="checkbox" value="arte"> Calculo I<br>
+        <input type="checkbox" name="checkbox" value="arte"> Ingles<br><br>
+        <!--Select-->
+        <label>País:</label><br>
+        <select name="pais" required>
+            <option value="">Seleccione un país</option>
+            <option value="peru">Perú</option>
+            <option value="ecuador">Chile</option>
+            <option value="bolivia">Argentina</option>
+            <option value="colombia">Colombia</option>
+        </select><br><br>
+        <!--Textarea-->
+        <label>Comentarios:</label><br>
+        <textarea rows="4" cols="30"></textarea> <br><br>
+        <!--Archivo -->
+        <label>Adjuntar Archivo:</label><br>
+        <input type="file" name="archivo" accept="image/*"><br><br>
+        <!--Color favorito-->
+        <label>Color Favorito:</label><br>
+        <input type="color" name="color_favorito"><br><br>
+        <!--Rango-->
+        <label>Nivel de Satisfacción:</label><br>0
+        <input type="range" name="calificacion" min="0" max="10">10<br><br>
+        <!--Busqueda-->
+        <label>Buscar:</label><br>
+        <input type="search" name="busqueda"><br><br>
+        <!--Boton-->
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+        
+    </form>
+</body>
+</html>

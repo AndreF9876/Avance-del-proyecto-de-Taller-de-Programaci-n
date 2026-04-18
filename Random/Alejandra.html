@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Alejandra</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300;500&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fdf0f6; /* Fondo crema rosado */
+            font-family: 'Quicksand', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Estilo de la Carta */
+        .carta {
+            background: #ffffff;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            border: 2px solid #f2d1e1;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .carta::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px dashed #d4a5bc;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #b57ba6;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .firma {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #d4a5bc;
+            margin-top: 30px;
+        }
+
+        /* Corazones no rojos (Pasteles/Lilas) */
+        .corazon {
+            position: absolute;
+            color: #e6b3e1; /* Color lila/rosa pastel */
+            font-size: 20px;
+            user-select: none;
+            pointer-events: none;
+            animation: flotar 4s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Decoración extra */
+        .stamp {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 80px;
+            height: 80px;
+            background: #f2d1e1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px double white;
+            transform: rotate(15deg);
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carta">
+        <div class="stamp">CON<br>AMOR</div>
+        <h1>Hola, Alejandra</h1>
+        <p>
+            Quería escribirte algo especial, algo que fuera tan único como tú. 
+            A veces las palabras se quedan cortas, pero los detalles 
+            logran decir lo que el corazón siente.
+        </p>
+        <p>
+            Gracias por ser esa persona que ilumina los días. 
+            Espero que esta pequeña carta digital te saque una sonrisa hoy.
+        </p>
+        <div class="firma">Con cariño, para ti.</div>
+    </div>
+
+    <script>
+        function crearCorazon() {
+            const corazon = document.createElement('div');
+            corazon.classList.add('corazon');
+            corazon.innerHTML = '💜'; // Corazón morado
+            
+            // Variar entre diferentes tipos de corazones no rojos
+            const tipos = ['💜', '💖', '✨', '🌸', '🤍'];
+            corazon.innerHTML = tipos[Math.floor(Math.random() * tipos.length)];
+
+            corazon.style.left = Math.random() * 100 + "vw";
+            corazon.style.animationDuration = Math.random() * 2 + 3 + "s";
+            corazon.style.fontSize = Math.random() * 10 + 15 + "px";
+            
+            document.body.appendChild(corazon);
+
+            setTimeout(() => {
+                corazon.remove();
+            }, 4000);
+        }
+
+        // Crear corazones continuamente
+        setInterval(crearCorazon, 300);
+
+        // También crear al hacer click
+        document.addEventListener('click', (e) => {
+            for(let i=0; i<5; i++) {
+                crearCorazon();
+            }
+        });
+    </script>
+</body>
+</html>
