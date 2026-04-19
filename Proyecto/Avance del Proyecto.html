@@ -56,18 +56,23 @@
       cursor: pointer;
     }
     .btn-nav:hover { /* Estilos para el botón de inicio de sesión al pasar el mouse por encima */
-      background-color: #235f49;
+      background-color: #4eab26;
     }
 
     /* SECCIÓN VERDE  */
-    .seccion-verde { /* Estilos para la sección verde (inicio) */
-      background-image: url('../img/PelucasCaninas.png'); /* Imagen de fondo para la sección verde */
-      background-size: 100% 100%;
-      background-position: center; /* Para centrar la imagen de fondo */
-      background-repeat: no-repeat; /* Para evitar que la imagen de fondo se repita */
-      position: relative; /* Para posicionar los elementos dentro de la sección verde */
+    .seccion-verde {
+      background-color: #4eab26; /* solo color sólido */
+      background-image: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       color: #ffffff;
       padding: 100px 100px;
+      position: relative;
+    }
+    .hero-img {
+      width: 600px;
+      opacity: 0.9;
     }
     /* Capa verde semitransparente encima de la imagen */
     .seccion-verde::before {
@@ -282,27 +287,45 @@
       color: rgba(255, 255, 255, 0.5);
       text-align: center;
       padding: 24px 40px;
-      font-size: 13px;
+      font-size: 16px;
       line-height: 1.6;
     }
+    .footer-redes { /* Estilos para el contenedor de las redes sociales dentro del pie de página */
+      display: flex; 
+      justify-content: center; 
+      gap: 20px;  
+      margin-top: 0px; /* Espacio entre el texto y los íconos de redes sociales */
+    }
+    .footer-redes a { /* Estilos para los enlaces de redes sociales dentro del pie de página */
+      color: rgba(255, 255, 255, 0.7); 
+      font-size: 24px; /* Tamaño de los íconos de redes sociales */
+      transition: color 0.3s;
+    }
+    .footer-redes a:hover { /* Estilos para los enlaces de redes sociales al pasar el mouse por encima dentro del pie de página */
+      color: #ffffff;
+    }
+    
 
   </style>
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <body>
  
   <!-- NAV — sin imagen del logo -->
   <nav>
     <div class="logo">Pelucas Caninas</div>
     <nav>
-      <a href="">Inicio</a>
+      <a href="#Principal">Inicio</a>
       <a href="">Servicios</a>
       <a href="#ubicacion">Ubicación</a>
     </nav>
     <a href="#agendar" class="btn-nav">Agendar Cita</a>  
   </nav>
 
-  <!-- SECCIÓN 1 — imagen de fondo -->
-  <section class="seccion-verde">
+  <!-- SECCIÓN 1 -->
+<section class="seccion-verde" id="Principal">
+  
+  <div class="hero-contenido">
     <div class="badge">Tu veterinaria de confianza</div>
     <h1>
       Bienvenido a <span>Pelucas Caninas</span>
@@ -325,7 +348,12 @@
         <div>Emergencias</div>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Imagen al lado derecho -->
+  <img src="../img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" class="hero-img" />
+
+</section>
  
   <!-- Galería -->
   <section class="galeria">
@@ -357,7 +385,7 @@
   <div class="mapa-iframe">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4198.398497088676!2d-76.9881!3d-11.9332!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105dac758c6c9a7%3A0x4149dac85428a93b!2sJos%C3%A9%20Carlos%20Mari%C3%A1tegui%2C%20San%20Juan%20de%20Lurigancho%2015449!5e1!3m2!1ses!2spe!4v1776559193299!5m2!1ses!2spe"
       width="100%" height="450" style="border:0; border-radius: 12px;"
-      allowfullscreen="" loading="lazy"
+      allowfullscreen="" loading="lazy" 
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </div>
@@ -367,7 +395,7 @@
   <section class="seccion-blanca" id="agendar">  
     <h2>Agendar Cita</h2>
     <p class="subtitulo">Completa el formulario y nos pondremos en contacto contigo</p>
-    <div class="formulario">
+    <div class="formulario"> 
       <label>Nombre del dueño</label>
       <input type="text" placeholder="Ingrese su nombre" required />
  
@@ -402,9 +430,18 @@
 
   <!-- Derechos Reservados -->
   <footer>
-    <p>Derechos Reservados: &copy; Grupo 4 del curso de Taller de Programación Web
-      de la Universidad Tecnológica del Perú. 
-  </footer>
+  <p>Derechos Reservados: &copy; Grupo 4 del curso de Taller de Programación Web
+    de la Universidad Tecnológica del Perú.</p>
+  
+  <p style="margin-bottom: 10px; font-size: 17px;">Síguenos en nuestras redes sociales:</p> 
+
+  <div class="footer-redes"> <!-- Contenedor para los enlaces de redes sociales dentro del pie de página -->
+    <a href="https://www.tiktok.com/@pelucascaninasok?lang=es-419"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100064917535819"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/pelucascaninas/"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/51937317249"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
 
   
 </body>
