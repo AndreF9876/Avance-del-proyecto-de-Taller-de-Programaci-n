@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+}
+/* NOSOTROS */
+.nosotros {
+  padding: 120px 60px;
+  background-color: #e8f5e0;
+}
+
+.nosotros-contenido {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+  object-fit: cover;
+}
+
+.nosotros-texto h2 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.nosotros-texto p {
+  font-size: 15px;
+  line-height: 1.3;
+  color: #000;
+  margin-bottom: 22px;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .nosotros {
+    padding: 70px 25px;
+  }
+
+  .nosotros-contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-texto h2 {
+    font-size: 30px;
+  }
+}

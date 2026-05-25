@@ -1,196 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pelucas Caninas | Tu Veterinaria de confianza</title>
-  <meta name="description" content="Descubre la mejor veterinaria para tu mascota. Servicios de calidad y atención personalizada." />  
-</head>
-<link rel="stylesheet" href="Estilo.css" /> <!-- Enlace a la hoja de estilos CSS para el diseño del sitio web -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> <!-- Enlace a Font Awesome para los íconos de redes sociales -->
-<body>
- 
-  <!-- NAV — sin imagen del logo -->
-  <nav>
-    <div class="logo">Pelucas Caninas</div>
-    <nav>
-      <a href="#Principal">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#ubicacion">Ubicación</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pelucas Caninas | Tu Peluquería de confianza</title>
+    <meta
+      name="description"
+      content="Descubre la mejor peluquería para tu mascota. Servicios de calidad y atención personalizada."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Enlace a Font Awesome para los íconos de redes sociales -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style-navbar.css" />
+    <link rel="stylesheet" href="css/style-footer.css" />
+    <link rel="stylesheet" href="css/style-inicio.css" />
+  </head>
+  <body>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+      <a href="inicio.html" class="logo">
+        <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
+      </a>
+      <div class="menu">
+        <a href="inicio.html#inicio">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="productos.html">Productos</a>
+        <a href="inicio.html#contactanos">Contáctanos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </div>
+      <a
+        href="https://wa.me/51937317249?text=Hola,%20quiero%20agendar%20una%20cita%20para%20mi%20mascota."
+        target="_blank"
+        class="btn-nav"
+      >
+        <i class="fab fa-whatsapp"></i>
+        Agendar Cita
+      </a>
     </nav>
-    <a href="#agendar" class="btn-nav">Agendar Cita</a>  
-  </nav>
 
-  <!-- SECCIÓN 1 -->
-<section class="seccion-verde" id="Principal"> <!-- Sección principal con fondo verde y contenido alineado a la izquierda -->
-  <div class="hero-contenido">
-    <div class="badge">Tu veterinaria de confianza</div>
-    <h1>
-      Bienvenido a <span>Pelucas Caninas</span>
-    </h1>
-    <p>
-      Salón especializado en estética canina, realizamos baños y cortes de raza de acuerdo 
-      a la estructura y pelaje de tu mascota. Usamos productos de excelente calidad que nos permiten realzar la belleza de tu mascota.
-    </p>
-    <div class="botones">
-      <a href="#agendar" class="btn-amarillo">Agendar Cita Ahora</a>
-      <a href="#servicios" class="btn-blanco">Ver Servicios</a>
-    </div>
-    <div class="estadisticas">
-      <div>
-        <div>500+</div>
-        <div>Mascotas felices</div>
+    <!-- SECCIÓN VERDE -->
+    <section class="hero-inicio" id="inicio">
+      <div class="hero-texto">
+        <div class="badge-hero">
+          Grooming profesional con más de 20 años de experiencia
+        </div>
+        <h1>Cuidamos la belleza y salud de tu mascota</h1>
+        <p>
+          En Pelucas Caninas brindamos baños, cortes de raza y estética canina
+          personalizada con paciencia, cariño y productos de calidad.
+        </p>
+
+        <div class="hero-botones">
+          <a
+            href="https://wa.me/51937317249?text=Hola,%20quiero%20agendar%20una%20cita%20para%20mi%20mascota."
+            target="_blank"
+            class="btn-principal"
+          >
+            <i class="fab fa-whatsapp"></i> Agendar Cita
+          </a>
+          <a href="servicios.html" class="btn-secundario"> Ver Servicios </a>
+        </div>
+
+        <div class="hero-datos">
+          <div>
+            <strong>20+</strong>
+            <span>Años de experiencia</span>
+          </div>
+
+          <div>
+            <strong>500+</strong>
+            <span>Mascotas felices</span>
+          </div>
+
+          <div>
+            <strong>SJL</strong>
+            <span>Atención personalizada</span>
+          </div>
+        </div>
       </div>
-      <div>
-        <div>24/7</div>
-        <div>Emergencias</div>
+
+      <div class="hero-imagen">
+        <img
+          src="img/manuel corte.jpeg"
+          alt="Manuel Tirado realizando corte canino"
+        />
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Imagen al lado derecho -->
-  <img src="../img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" class="hero-img" />
+    <!-- Galería -->
+    <section class="galeria">
+      <h2 class="titulo-seccion">Nuestros engreídos</h2>
+      <p class="descripcion-seccion">
+        Algunos clientes atendidos con cariño, paciencia y cuidado profesional
+      </p>
 
-</section>
- 
-<!-- SECCIÓN 2 SERVICIOS -->
-<section id="servicios" style="padding: 230px; background-color: #e8e3e3ea; text-align: center;"> <!-- Sección de servicios con fondo claro y contenido centrado -->
-  <h2 style="font-size: 32px; color: #2d7a5f; margin-bottom: 30px;">
-    Nuestros Servicios
-  </h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-    <!-- BAÑO BÁSICO -->
-    <div style="background: white; padding: 20px; border-radius: 12px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"> <!-- Tarjeta para el servicio de baño básico con fondo blanco, padding, bordes redondeados y sombra -->
-      <h3 style="color: #4eab26;">Baño Básico</h3>
-      <ul style="text-align: left; margin-top: 10px;">
-        <li> 2 lavados con shampoo hipoalergénico</li>
-        <li>Corte higiénico</li>
-        <li>Corte y limado de uñas</li>
-        <li>Limpieza y depilación de oídos</li>
-        <li>Despejado de ojos y almohadillas</li>
-        <li>Perfume y lazo decorativo</li>
-      </ul>
-    </div>
-    <!-- BAÑO PREMIUM -->
-    <div style="background: white; padding: 20px; border-radius: 12px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"> <!-- Tarjeta para el servicio de baño premium con fondo blanco, padding, bordes redondeados y sombra -->
-      <h3 style="color: #4eab26;">Baño Premium</h3>
-      <ul style="text-align: left; margin-top: 10px;">
-        <li>2 lavados con shampoo hipoalergénico o antipulgas</li>
-        <li>Aplicación de acondicionador</li>
-        <li>Corte higiénico</li>
-        <li>Corte y limado de uñas</li>
-        <li>Limpieza y depilación de oídos</li>
-        <li>Limpieza e hidratación de almohadillas</li>
-        <li>Retoque de carita</li>
-        <li>Cepillado de dientes</li>
-        <li>Limpieza de glándulas perianales</li>
-        <li>Perfume y lazo decorativo</li>
-      </ul>
-    </div>
-    <!-- BAÑO Y CORTE -->
-    <div style="background: white; padding: 20px; border-radius: 12px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"> <!-- Tarjeta para el servicio de baño y corte con fondo blanco, padding, bordes redondeados y sombra -->
-      <h3 style="color: #4eab26;">Baño y Corte</h3>
-      <ul style="text-align: left; margin-top: 10px;">
-        <li>Incluye baño básico o premium</li>
-        <li>Corte de raza o adaptado</li>
-        <li>Corte con máquina, tijera o ambos</li>
-        <li>Perfume y lazo decorativo</li>
-      </ul>
-    </div>
-  </div>
-</section>
+      <div class="galeria-carrusel">
+        <div class="galeria-track">
+          <img src="img/Bianca.jpg" alt="Mascota Bianca" />
+          <img src="img/Candy.jpg" alt="Mascota Candy" />
+          <img src="img/Goku.jpg" alt="Mascota Goku" />
+          <img src="img/Linda.jpg" alt="Mascota Linda" />
+          <img src="img/Lunita.jpg" alt="Mascota Lunita" />
+          <img src="img/Manuel.jpg" alt="Mascota Manuel" />
+          <img src="img/Max.jpg" alt="Mascota Max" />
+          <img src="img/Pelusa.jpg" alt="Mascota Pelusa" />
+          <img src="img/Valentino.jpg" alt="Mascota Valentino" />
+          <img src="img/Willow y su hijo.jpg" alt="Mascota Willow y su hijo" />
 
-  <!-- Galería -->
-  <section class="galeria"> <!-- Sección de galería de mascotas con fondo claro, imágenes con bordes redondeados y título centrado -->
-    <h2>NUESTROS PELUDOS CONSENTIDOS</h2>
-    <img src="../img/Bianca.jpg" alt="Mascota 1" />
-    <img src="../img/Candy.jpg" alt="Mascota 2" />
-    <img src="../img/Goku.jpg" alt="Mascota 3" />
-    <img src="../img/Linda.jpg" alt="Mascota 4" />
-    <img src="../img/Lunita.jpg" alt="Mascota 5" />
-    <img src="../img/Manuel.jpg" alt="Mascota 6" />
-    <img src="../img/Max.jpg" alt="Mascota 7" />
-    <img src="../img/Pelusa.jpg" alt="Mascota 8" />
-    <img src="../img/Valentino.jpg" alt="Mascota 9" />
-    <img src="../img/Willow y su hijo.jpg" alt="Mascota 10" />
-  </section>
+          <!-- Se repiten para que el carrusel sea continuo -->
+          <img src="img/Bianca.jpg" alt="Mascota Bianca" />
+          <img src="img/Candy.jpg" alt="Mascota Candy" />
+          <img src="img/Goku.jpg" alt="Mascota Goku" />
+          <img src="img/Linda.jpg" alt="Mascota Linda" />
+        </div>
+      </div>
+    </section>
 
-  
-  <!-- Sección Mapa -->
-<section class="seccion-mapa" id="ubicacion"> <!-- Sección de ubicación con fondo verde muy claro, contenido alineado a la izquierda y mapa al lado derecho -->
-  <div class="mapa-texto">
-    <h2>Aquí nos encontramos<br>Te invitamos a<br>conocernos</h2>
-    <p>Mza. S3 Lote 17 A.H, San Juan de Lurigancho 15449</p>
-    <ul>
-      <li>Lunes a Sabados de 9:00 AM hasta las 6:00 PM</li>
-      <li>Emergencias 24/7</li>
-      <li>Teléfono: +51 937 317 249</li>
-    </ul> <br>
-    <p>Estamos aquí para brindar el mejor cuidado en un ambiente cómodo y accesible.</p>
-  </div>
-  <div class="mapa-iframe">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d624.0942498649472!2d-76.9894167639245!3d-11.933817132253546!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105db5e62725871%3A0x1715d2ecc03bbdcf!2sPelucas%20Caninas!5e1!3m2!1ses!2spe!4v1776693357090!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-      width="100%" height="450" style="border:0; border-radius: 12px;"
-      allowfullscreen="" loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</section>
+    <!-- Recomendaciones -->
+    <section class="recomendaciones" id="recomendaciones">
+      <h2 class="titulo-seccion">Recomendaciones para tu mascota</h2>
+      <p class="descripcion-seccion">
+        Cuidados básicos para mantener a tu engreído limpio, sano y feliz.
+      </p>
 
-<!-- Agendar Cita -->
- <form>
-  <section class="seccion-blanca" id="agendar">  <!-- Sección para agendar cita con fondo blanco, contenido centrado y formulario estilizado -->
-    <h2>Agendar Cita</h2>
-    <p class="subtitulo">Completa el formulario y nos pondremos en contacto contigo</p>
-    <div class="formulario"> 
-      <label>Nombre del dueño</label>
-      <input type="text" placeholder="Ingrese su nombre" required />
- 
-      <label>Nombre de la mascota</label>
-      <input type="text" placeholder="Nombre de tu mascota" required />
- 
-      <label>Tipo de mascota</label>
-      <select required>
-        <option value="">Selecciona una opción</option>
-        <option>Perro</option>
-        <option>Gato</option>
-        <option>Conejo</option>
-        <option>Otro</option>
-      </select>
+      <div class="cards-recomendaciones">
+        <div class="card-reco">
+          <i class="fa-solid fa-shower"></i>
+          <h3>Baño adecuado</h3>
+          <p>
+            Baña a tu mascota con productos especiales para perros y evita usar
+            shampoo de personas, ya que puede irritar su piel.
+          </p>
+        </div>
+        <div class="card-reco">
+          <i class="fa-solid fa-paw"></i>
+          <h3>Cuidado de uñas</h3>
+          <p>
+            Revisa sus uñas con frecuencia. Si están muy largas, pueden causarle
+            molestias al caminar o correr.
+          </p>
+        </div>
+        <div class="card-reco">
+          <i class="fa-solid fa-brush"></i>
+          <h3>Cepillado frecuente</h3>
+          <p>
+            Cepilla su pelaje para evitar nudos, retirar pelo muerto y
+            mantenerlo limpio por más tiempo.
+          </p>
+        </div>
+        <div class="card-reco">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <h3>Visitas periódicas</h3>
+          <p>
+            Agenda baños, cortes y revisiones de limpieza para prevenir malos
+            olores, pulgas y acumulación de suciedad.
+          </p>
+        </div>
+      </div>
+    </section>
 
-      <label>Fecha de la cita</label>
-      <input type="date" required />
+    <!-- Sección contactanos -->
+    <section class="seccion-contacto" id="contactanos">
+      <div class="contacto-contenido">
+        <div class="contacto-info">
+          <h2>Contáctanos</h2>
+          <p class="contacto-subtitulo">
+            ¿Tienes una consulta? Estamos para ayudarte.
+          </p>
 
-      <label>Hora de la cita</label>
-      <input type="time" required />
- 
-      <label>Teléfono de contacto</label>
-      <input type="tel" placeholder="Su número de teléfono" required />
- 
-      <label>Comentarios</label>
-      <textarea rows="5" placeholder="Ingrese cualquier comentario adicional"></textarea>
- 
-      <button class="btn-enviar">Confirmar Cita</button>
-    </div>
-  </section>
-  </form>
+          <div class="contacto-card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <div>
+              <h3>Agenda tu cita</h3>
+              <p>Reserva el baño o corte de tu mascota.</p>
+              <a href="https://wa.me/51937317249?text=Hola,%20quiero%20agendar%20una%20cita%20para%20mi%20mascota." target="_blank" class="btn-contacto"
+                >Agendar Cita</a
+              >
+            </div>
+          </div>
 
+          <div class="contacto-card">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <h3>Telefono</h3>
+              <p>+51 937 317 249</p>
+            </div>
+          </div>
 
-  <!-- Derechos Reservados -->
-  <footer>
-  <p>Derechos Reservados: &copy; Grupo 4 del curso de Taller de Programación Web
-    de la Universidad Tecnológica del Perú.</p> <!-- Texto de derechos reservados con el nombre del grupo y la universidad -->
-  
-  <p style="margin-bottom: 10px; font-size: 17px;">Síguenos en nuestras redes sociales:</p> <!-- Texto para invitar a seguir en redes sociales con un poco de espacio debajo -->
+          <div class="contacto-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h3>Ubicación</h3>
+              <p>
+                Mz S3 Lote 7 José Carlos Mariátegui, San Juan de Lurigancho
+                15449, Perú
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="contacto-mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.5775850362816!2d-76.99019042118103!3d-11.934457835306008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105db5e62725871%3A0x1715d2ecc03bbdcf!2sPelucas%20Caninas!5e0!3m2!1ses-419!2spe!4v1779052191958!5m2!1ses-419!2spe"
+            loading="lazy"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
 
-  <div class="footer-redes"> <!-- Contenedor para los enlaces de redes sociales dentro del pie de página -->
-    <a href="https://www.tiktok.com/@pelucascaninasok?lang=es-419" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.facebook.com/profile.php?id=100064917535819" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.instagram.com/pelucascaninas/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/51937317249" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  </div>
-</footer>
+    <!-- Footer -->
+    <footer class="footer-nuevo">
+      <div class="footer-contenedor">
+        <div class="footer-logo-box">
+          <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
+          <p>Estética canina con amor y dedicación.</p>
+        </div>
 
-  
-</body>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <a href="#inicio">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="productos.html">Productos</a>
+          <a href="#contactanos">Contáctanos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Síguenos</h4>
+          <div class="footer-redes-nuevo">
+            <a
+              href="https://www.tiktok.com/@pelucascaninasok?lang=es-419"
+              target="_blank"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100064917535819"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/pelucascaninas/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+          <h4 class="contactame-titulo">Contáctame</h4>
+          <p class="footer-correo">
+            <i class="fa-solid fa-envelope"></i>
+            manueltirado1978@gmail.com
+          </p>
+        </div>
+
+        <div class="footer-imagenes">
+          <a href="libro.html">
+            <img
+              src="img/Libro de reclamaciones.jpg"
+              alt="Libro de Reclamaciones"
+            />
+          </a>
+
+          <img src="img/pagos.png" alt="Medios de pago" />
+        </div>
+      </div>
+
+      <p class="footer-copy-nuevo">
+        © 2026 Pelucas Caninas - Todos los derechos reservados
+      </p>
+    </footer>
+  </body>
 </html>

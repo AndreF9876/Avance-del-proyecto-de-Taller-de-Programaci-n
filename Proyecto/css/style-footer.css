@@ -1,0 +1,136 @@
+/* FOOTER MODERNO */
+.footer-nuevo {
+  background: linear-gradient(135deg, #2d7a5f, #4eab26);
+  color: #ffffff;
+  padding: 60px 80px 25px;
+}
+
+.footer-contenedor {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.2fr 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.footer-logo-box img {
+  width: 200px;
+  background: white;
+  padding: 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-logo-box p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.footer-col a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 9px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.footer-col a:hover {
+  color: #ffd166;
+}
+
+.footer-redes-nuevo {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.footer-redes-nuevo a {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  color: #2d7a5f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-redes-nuevo a:hover {
+  background: #d4a030;
+  color: #ffffff;
+  transform: translateY(-4px);
+}
+
+.contactame-titulo {
+  margin-top: 10px;
+}
+
+.footer-correo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.footer-imagenes {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-imagenes img {
+  width: 120px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.footer-copy-nuevo {
+  text-align: center;
+  margin-top: 45px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+  .footer-nuevo {
+    padding: 45px 25px 25px;
+    text-align: center;
+  }
+
+  .footer-contenedor {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-logo-box img,
+  .footer-imagenes img {
+    margin: auto;
+  }
+
+  .footer-redes-nuevo {
+    justify-content: center;
+  }
+
+  .footer-correo {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-imagenes {
+    align-items: center;
+  }
+}

@@ -1,0 +1,157 @@
+* { 
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+/* BODY */
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  padding-top: 120px;
+  background-color: #e8f5e0;
+}
+/* LINKS */
+.links{
+    display: flex;
+    gap: 30px;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.links a:hover{
+    color: #25d366;
+}
+
+/* BOTÓN */
+.btn-nav{
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 22px;
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-nav:hover{
+    background-color: #4eab26;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;  
+}
+.tarjeta{
+    background-color: white;
+    width: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.4s;
+    /* SOLO SOMBRA */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.tarjeta h3,
+.tarjeta p{
+    text-decoration: none;
+}
+
+.tarjeta{
+    text-decoration: none;
+    color: black;
+}
+
+.tarjeta:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.tarjeta img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid #2d7a5f; /* marco completo */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+/* EFECTO */
+.tarjeta img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.tarjeta h3{
+    margin-top: 15px;
+}
+.tarjeta p{
+    color: #555;
+    min-height: 60px;
+    margin-top: 10px;
+}
+/* BOTÓN */
+.tarjeta button{
+    margin-top: auto;
+    width: 140px;
+
+    padding: 10px 20px;
+    border: none;
+
+    background-color: #2d7a5f;
+    color: white;
+
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tarjeta button:hover{
+    background-color: #4eab26;
+}
+.tarjeta{
+    animation: subir 1s ease forwards;
+    opacity: 0;
+}
+/* EFECTO */
+@keyframes subir{
+
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ANIMACIÓN */
+.hero-img,
+.hero-contenido {
+  animation: aparecer 3s ease-in-out;
+}
+
+@keyframes aparecer {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
