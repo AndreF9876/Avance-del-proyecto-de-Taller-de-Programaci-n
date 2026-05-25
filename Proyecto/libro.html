@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libro de Reclamaciones</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style-navbar.css" />
+    <link rel="stylesheet" href="css/style-footer.css" />
+    <link rel="stylesheet" href="css/style-libro.css" />
+  </head>
+  <body>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+      <a href="inicio.html" class="logo">
+        <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
+      </a>
+      <div class="menu">
+        <a href="inicio.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="productos.html">Productos</a>
+        <a href="inicio.html#contactanos">Contáctanos</a>
+        <a href="nosotros.html">Nosotros</a>
+      </div>
+      <a
+        href="https://wa.me/51937317249?text=Hola!%20Quisiera%20más%20información%20sobre%20sus%20servicios."
+        target="_blank"
+        class="btn-nav"
+      >
+        <i class="fab fa-whatsapp"></i>
+        Agendar Cita
+      </a>
+    </nav>
+    <!-- Contenido del libro de reclamaciones -->
+    <main class="contenedor">
+      <h1>Libro de reclamaciones</h1>
+
+      <div class="datos-empresa">
+        <p><strong>PELUCAS CANINAS S.A.C</strong></p>
+        <p><strong>RUC:</strong> 20610289321</p>
+        <p>
+          <strong>Dirección:</strong> Mz S3 Lote 7, Jose Carlos Mariategui, SJL,
+          Lima
+        </p>
+      </div>
+
+      <form class="formulario-libro">
+        <h2>Datos de la persona que presenta el reclamo</h2>
+
+        <label>Elegir una fecha *</label>
+        <input type="date" required />
+
+        <label>Número de documento de identidad *</label>
+        <input type="text" required />
+
+        <div class="fila">
+          <div>
+            <label>Nombre *</label>
+            <input type="text" required />
+          </div>
+          <div>
+            <label>Apellido *</label>
+            <input type="text" required />
+          </div>
+        </div>
+
+        <div class="fila">
+          <div>
+            <label>Email</label>
+            <input type="email" />
+          </div>
+          <div>
+            <label>Teléfono</label>
+            <input type="tel" placeholder="+51" />
+          </div>
+        </div>
+
+        <label>Dirección</label>
+        <textarea rows="4"></textarea>
+
+        <h3>Información general</h3>
+
+        <p>Identificación del bien contratado</p>
+        <label class="opcion"
+          ><input type="radio" name="bien" /> Producto</label
+        >
+        <label class="opcion"
+          ><input type="radio" name="bien" /> Servicio</label
+        >
+
+        <label>Monto reclamado *</label>
+        <input type="number" required class="monto" />
+
+        <label>Descripción *</label>
+        <textarea rows="5" required></textarea>
+
+        <p>Selecciona una opción *</p>
+        <label class="opcion"
+          ><input type="radio" name="tipo" required /> Queja</label
+        >
+        <label class="opcion"><input type="radio" name="tipo" /> Reclamo</label>
+
+        <label>Detalle del reclamo/queja *</label>
+        <textarea rows="5" required></textarea>
+
+        <label class="check">
+          <input type="checkbox" required />
+          Declaro que la información que he proporcionado es correcta, completa
+          y verdadera. *
+        </label>
+
+        <label class="check">
+          <input type="checkbox" required />
+          Al enviar este formulario acepto el flujo transfronterizo de mis datos
+          personales, según la ley de Protección de Datos Personales. *
+        </label>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer-nuevo">
+      <div class="footer-contenedor">
+        <div class="footer-logo-box">
+          <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
+          <p>Estética canina con amor y dedicación.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <a href="inicio.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="productos.html">Productos</a>
+          <a href="inicio.html#contactanos">Contáctanos</a>
+          <a href="nosotros.html">Nosotros</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Síguenos</h4>
+          <div class="footer-redes-nuevo">
+            <a
+              href="https://www.tiktok.com/@pelucascaninasok?lang=es-419"
+              target="_blank"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100064917535819"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/pelucascaninas/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+          <h4 class="contactame-titulo">Contáctame</h4>
+          <p class="footer-correo">
+            <i class="fa-solid fa-envelope"></i>
+            manueltirado1978@gmail.com
+          </p>
+        </div>
+
+        <div class="footer-imagenes">
+          <a href="libro.html">
+            <img
+              src="img/Libro de reclamaciones.jpg"
+              alt="Libro de Reclamaciones"
+            />
+          </a>
+
+          <img src="img/pagos.png" alt="Medios de pago" />
+        </div>
+      </div>
+
+      <p class="footer-copy-nuevo">
+        © 2026 Pelucas Caninas - Todos los derechos reservados
+      </p>
+    </footer>
+  </body>
+</html>
