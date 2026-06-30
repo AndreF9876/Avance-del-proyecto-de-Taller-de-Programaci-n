@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>comotech</title>
-     <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comotech Cepillo de Aseo</title>
+    <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
@@ -12,16 +12,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="css/style-general.css" />
     <link rel="stylesheet" href="css/style-navbar.css" />
     <link rel="stylesheet" href="css/style-footer.css" />
-    <link rel="stylesheet" href="css/style-productos.css" />
     <link rel="stylesheet" href="css/style-productos-seleccionados.css" />
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
       <a href="inicio.html" class="logo">
         <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
       </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburguesa">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
       <div class="menu">
         <a href="inicio.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
@@ -29,105 +35,114 @@
         <a href="inicio.html#contactanos">Contáctanos</a>
         <a href="nosotros.html">Nosotros</a>
       </div>
-      <a href="https://wa.me/51937317249?text=Hola!%20Quisiera%20más%20información%20sobre%20sus%20productos." target="_blank" class="btn-nav">
-        <i class="fab fa-whatsapp"></i>
-        Agendar Cita
-      </a>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-icon-btn" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="nav-cart-btn" id="cartToggle" aria-label="Abrir carrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cartCount">0</span>
+        </button>
+      </div>
     </nav>
     <main class="producto-grande">
-    <div class="producto-img">
-        <img src="img/comotech.jpg">
-    </div>
-    <div class="producto-info">
-        <p class="categoria">
-            Aseo / Mascotas
-         </p>
+      <div class="producto-img">
+        <img src="img/comotech.jpg" />
+      </div>
+      <div class="producto-info">
+        <p class="categoria">Aseo / Mascotas</p>
         <h1>Comotech Cepillo de aseo</h1>
         <h2>S/ 30.00</h2>
-        <p class="descripcion"> Este juego de cepillos de ducha para perros contiene 3 cepillos de diferentes funciones, que pueden resolver eficazmente los problemas de baño, eliminación de pelo, masaje y aseo de tu mascota. Deja que tu mascota se enamore del baño y disfrute de la hora del baño. ¡Los mejores regalos de baño para mascotas!</p>
+        <p class="descripcion">
+          Este juego de cepillos de ducha para perros contiene 3 cepillos de
+          diferentes funciones, que pueden resolver eficazmente los problemas de
+          baño, eliminación de pelo, masaje y aseo de tu mascota. Deja que tu
+          mascota se enamore del baño y disfrute de la hora del baño. ¡Los
+          mejores regalos de baño para mascotas!
+        </p>
         <div class="botones">
-            <a href="https://wa.me/51937317249?text=Hola,%20quiero%20agendar%20una%20cita%20para%20mi%20mascota." target="_blank" class="btn-nav">
-        <i class="fab fa-whatsapp"></i>
-                Pedir por whatsapp
-            </a>
+          <a
+            href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20sobre%20el%20Cepillo%20de%20Aseo%20Comotech."
+            target="_blank"
+            class="btn-producto-wsp"
+          >
+            <i class="fab fa-whatsapp"></i>
+            Pedir por WhatsApp
+          </a>
         </div>
-    </div>
-</main>
+      </div>
+    </main>
 
-<section class="productos-relacionados">
+    <section class="productos-relacionados">
+      <h2>Mas de nuestros productos</h2>
 
-    <h2>Mas de nuestros productos</h2>
-
-    <div class="contenedor-productos">
-
+      <div class="contenedor-productos">
         <a href="shampoo_bexter.html" class="card-producto">
-            <img src="img/bexter.jpg">
-            <h3>Shampoo bexter</h3>
-            <p>S/ 25.00</p>
+          <img src="img/bexter.jpg" />
+          <h3>Shampoo bexter</h3>
+          <p>S/ 25.00</p>
         </a>
 
         <a href="kit-aseo.html" class="card-producto">
-            <img src="img/augwind.jpg">
-            <h3>Kit de aseo para mascotas</h3>
-            <p>S/ 34.00</p>
+          <img src="img/augwind.jpg" />
+          <h3>Kit de aseo para mascotas</h3>
+          <p>S/ 34.00</p>
         </a>
 
         <a href="immhabi-toallitas.html" class="card-producto">
-            <img src="img/immhabi.jpg">
-            <h3>IMMHABI 400 toallitas</h3>
-            <p>S/ 52.00</p>
+          <img src="img/immhabi.jpg" />
+          <h3>IMMHABI 400 toallitas</h3>
+          <p>S/ 52.00</p>
         </a>
 
         <a href="allrier-juguete.html" class="card-producto">
-            <img src="img/ALLRIER.jpg">
-            <h3>ALLRIER Juguetes</h3>
-            <p>S/ 41.00</p>
+          <img src="img/ALLRIER.jpg" />
+          <h3>ALLRIER Juguetes</h3>
+          <p>S/ 41.00</p>
         </a>
 
         <a href="grenner-bolsas.html" class="card-producto">
-            <img src="img/Greener.jpg">
-            <h3>Bolsas para perros</h3>
-            <p>S/ 58.00</p>
+          <img src="img/Greener.jpg" />
+          <h3>Bolsas para perros</h3>
+          <p>S/ 58.00</p>
         </a>
 
         <a href="beebiepet.html" class="card-producto">
-            <img src="img/beebiepet.jpg">
-            <h3>Beebiepet Arnés táctico</h3>
-            <p>S/ 99.00</p>
+          <img src="img/beebiepet.jpg" />
+          <h3>Beebiepet Arnés táctico</h3>
+          <p>S/ 99.00</p>
         </a>
 
         <a href="arnes-matilor.html" class="card-producto">
-            <img src="img/Matilor.jpg">
-            <h3>Arnés Matilor</h3>
-            <p>S/ 34.00</p>
+          <img src="img/Matilor.jpg" />
+          <h3>Arnés Matilor</h3>
+          <p>S/ 34.00</p>
         </a>
 
         <a href="chomchom.html" class="card-producto">
-            <img src="img/Chomchom.jpg">
-            <h3>ChomChom Roller</h3>
-            <p>S/ 85.00</p>
+          <img src="img/Chomchom.jpg" />
+          <h3>ChomChom Roller</h3>
+          <p>S/ 85.00</p>
         </a>
 
         <a href="pethroom.html" class="card-producto">
-            <img src="img/pethroom.jpg">
-            <h3>PETHROOM Peine</h3>
-            <p>S/ 34.00</p>
+          <img src="img/pethroom.jpg" />
+          <h3>PETHROOM Peine</h3>
+          <p>S/ 34.00</p>
         </a>
 
         <a href="dissknic.html" class="card-producto">
-            <img src="img/dissknic.jpg">
-            <h3>DISSKNIC Pelota</h3>
-            <p>S/ 23.00</p>
+          <img src="img/dissknic.jpg" />
+          <h3>DISSKNIC Pelota</h3>
+          <p>S/ 23.00</p>
         </a>
-
-    </div>
-
-</section>
-     <footer class="footer-nuevo">
+      </div>
+    </section>
+    <footer class="footer-nuevo">
       <div class="footer-contenedor">
         <div class="footer-logo-box">
           <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
-          <p>Estética canina con amor y dedicación.</p>
         </div>
 
         <div class="footer-col">
@@ -182,5 +197,6 @@
         © 2026 Pelucas Caninas - Todos los derechos reservados
       </p>
     </footer>
-</body>
+      <script src="js/app.js"></script>
+  </body>
 </html>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pelucas Caninas | Tu Peluquería de confianza</title>
+    <title>Pelucas Caninas - Inicio</title>
     <meta
       name="description"
       content="Descubre la mejor peluquería para tu mascota. Servicios de calidad y atención personalizada."
@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/style-general.css" />
     <link rel="stylesheet" href="css/style-navbar.css" />
     <link rel="stylesheet" href="css/style-footer.css" />
     <link rel="stylesheet" href="css/style-inicio.css" />
@@ -27,33 +28,49 @@
       <a href="inicio.html" class="logo">
         <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
       </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburguesa">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
       <div class="menu">
-        <a href="inicio.html#inicio">Inicio</a>
+        <a href="inicio.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
         <a href="productos.html">Productos</a>
         <a href="inicio.html#contactanos">Contáctanos</a>
         <a href="nosotros.html">Nosotros</a>
       </div>
-      <a
-        href="https://wa.me/51937317249?text=Hola,%20quiero%20agendar%20una%20cita%20para%20mi%20mascota."
-        target="_blank"
-        class="btn-nav"
-      >
-        <i class="fab fa-whatsapp"></i>
-        Agendar Cita
-      </a>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-icon-btn" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="nav-cart-btn" id="cartToggle" aria-label="Abrir carrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cartCount">0</span>
+        </button>
+      </div>
     </nav>
 
-    <!-- SECCIÓN VERDE -->
+    <!-- SECCIÓN INICIO -->
     <section class="hero-inicio" id="inicio">
+      <div class="hero-bg-slider" aria-hidden="true">
+        <img src="img/iniciofoto.webp" alt="" class="activo" />
+        <img src="img/ini3.jpg" alt="" />
+        <img src="img/ini4.webp" alt="" />
+      </div>
       <div class="hero-texto">
         <div class="badge-hero">
           Grooming profesional con más de 20 años de experiencia
         </div>
+
+        <h2 class="hero-bienvenida">Bienvenido a Pelucas Caninas</h2>
         <h1>Cuidamos la belleza y salud de tu mascota</h1>
+
         <p>
-          En Pelucas Caninas brindamos baños, cortes de raza y estética canina
-          personalizada con paciencia, cariño y productos de calidad.
+          Baños, cortes de raza y estética canina personalizada para que tu
+          engreído luzca limpio, feliz y bien cuidado.
         </p>
 
         <div class="hero-botones">
@@ -64,7 +81,7 @@
           >
             <i class="fab fa-whatsapp"></i> Agendar Cita
           </a>
-          <a href="servicios.html" class="btn-secundario"> Ver Servicios </a>
+          <a href="servicios.html" class="btn-secundario">Ver Servicios</a>
         </div>
 
         <div class="hero-datos">
@@ -72,24 +89,15 @@
             <strong>20+</strong>
             <span>Años de experiencia</span>
           </div>
-
           <div>
             <strong>500+</strong>
             <span>Mascotas felices</span>
           </div>
-
           <div>
             <strong>SJL</strong>
             <span>Atención personalizada</span>
           </div>
         </div>
-      </div>
-
-      <div class="hero-imagen">
-        <img
-          src="img/manuel corte.jpeg"
-          alt="Manuel Tirado realizando corte canino"
-        />
       </div>
     </section>
 
@@ -179,7 +187,10 @@
             <div>
               <h3>Agenda tu cita</h3>
               <p>Reserva el baño o corte de tu mascota.</p>
-              <a href="https://wa.me/51937317249?text=Hola,%20quiero%20agendar%20una%20cita%20para%20mi%20mascota." target="_blank" class="btn-contacto"
+              <a
+                href="https://wa.me/51937317249?text=Hola,%20quiero%20agendar%20una%20cita%20para%20mi%20mascota."
+                target="_blank"
+                class="btn-contacto"
                 >Agendar Cita</a
               >
             </div>
@@ -201,6 +212,7 @@
                 Mz S3 Lote 7 José Carlos Mariátegui, San Juan de Lurigancho
                 15449, Perú
               </p>
+              <p><br />Atencion: Lunes a Sábado de 9:00 a.m. a 6:00 p.m.</p>
             </div>
           </div>
         </div>
@@ -221,7 +233,6 @@
       <div class="footer-contenedor">
         <div class="footer-logo-box">
           <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
-          <p>Estética canina con amor y dedicación.</p>
         </div>
 
         <div class="footer-col">
@@ -276,5 +287,6 @@
         © 2026 Pelucas Caninas - Todos los derechos reservados
       </p>
     </footer>
+      <script src="js/app.js"></script>
   </body>
 </html>

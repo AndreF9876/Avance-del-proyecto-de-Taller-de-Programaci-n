@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos</title>
+    <title>Pelucas Caninas - Productos</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
@@ -12,17 +12,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="css/style-general.css" />
     <link rel="stylesheet" href="css/style-navbar.css" />
     <link rel="stylesheet" href="css/style-footer.css" />
     <link rel="stylesheet" href="css/style-productos.css" />
   </head>
   <body>
-
     <!-- BARRA DE NAVEGACIÓN -->
     <nav class="navbar">
       <a href="inicio.html" class="logo">
         <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
       </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburguesa">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
       <div class="menu">
         <a href="inicio.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
@@ -30,101 +36,173 @@
         <a href="inicio.html#contactanos">Contáctanos</a>
         <a href="nosotros.html">Nosotros</a>
       </div>
-      <a href="https://wa.me/51937317249?text=Hola!%20Quisiera%20más%20información%20sobre%20sus%20productos." target="_blank" class="btn-nav">
-        <i class="fab fa-whatsapp"></i>
-        Agendar Cita
-      </a>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-icon-btn" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="nav-cart-btn" id="cartToggle" aria-label="Abrir carrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cartCount">0</span>
+        </button>
+      </div>
     </nav>
 
-    <!-- SECCIÓN DE PRODUCTOS -->
-    <main class="contenedor">
-      <a href="shampoo_bexter.html" class="tarjeta">
-      <img src="img/bexter.jpg" />
-      <h3>Shampoo bexter</h3>
-      <p> Shampoo recomendado para perros mayores a 1 año con sensibilidad en la dermis.</p>
-      <button>Comprar</button>
-      </a>
-
-      <!-- TARJETA 2 -->
-      <a  href="kit-aseo.html"  class="tarjeta">
-        <img src="img/augwind.jpg" />
-        <h3>Kit de aseo para mascotas de 6 piezas</h3>
-        <p>Guantes de lavado para perros, cepillo de baño para perros.</p>
-        <button>Comprar</button>
-      </a>
-
-      <a href="immhabi-toallitas.html" class="tarjeta">
-        <img src="img/immhabi.jpg" />
-        <h3>IMMHABI 400 toallitas de perros para patas y trasero</h3>
-        <p>Hipoalergénicas, limpiadoras y desodorizantes.</p>
-        <button>Comprar</button>
-      </a>
-
-      <a href="allrier-juguete.html" class="tarjeta">
-        <img src="img/ALLRIER.jpg" />
-        <h3>ALLRIER Juguetes para perros</h3>
-        <p>Juguetes interactivos para perros de tira y afloja.</p>
-        <button>Comprar</button>
-      </a>
-
-      <a href="grenner-bolsas.html" class="tarjeta">
-        <img src="img/Greener.jpg" />
-        <h3>Bolsas de basura para perros</h3>
-        <p>100% a prueba de fugas (verde)</p>
-        <button>Comprar</button>
-      </a>
-
-      <a href="beebiepet.html" class="tarjeta">
-        <img src="img/beebiepet.jpg" />
-        <h3>Beebiepet - Arnés táctico</h3>
-        <p>
-          Resistente para perros grandes, ajustable, antitirones, reflectante.
+    <main>
+      <section class="productos" id="productos">
+        <h2 class="titulo-seccion">Nuestros Productos</h2>
+        <p class="descripcion-seccion">
+          Productos seleccionados para el cuidado, higiene y bienestar de tu
+          mascota.
         </p>
-        <button>Comprar</button>
-      </a>
 
-      <a href="arnes-matilor.html" class="tarjeta">
-        <img src="img/Matilor.jpg" />
-        <h3>Arnés para perro Matilor</h3>
-        <p>
-          Transpirable, diseño para meter por las patas para todo tipo de animal.
-        </p>
-        <button>Comprar</button>
-      </a>
+        <div class="buscador-productos">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="buscadorProductos" placeholder="Buscar producto..." />
+        </div>
 
-      <a href="comotech.html" class="tarjeta">
-        <img src="img/comotech.jpg" />
-        <h3>Comotech Cepillo de aseo para perros 3 en 1</h3>
-        <p>
-          Cepillo de champú y estropajo con mango ajustable para perros y gatos.
-        </p>
-        <button>Comprar</button>
-      </a>
+        <p class="sin-resultados" id="sinResultados">No se encontraron productos.</p>
 
-      <a href="chomchom.html" class="tarjeta">
-        <img src="img/Chomchom.jpg" />
-        <h3>ChomChom Roller Removedor de pelo de mascotas</h3>
-        <p>
-          Rodillo de pelusa reutilizable de tamaño original para gatos y perros.
-        </p>
-        <button>Comprar</button>
-      </a>
+        <div class="productos-grid">
+          <article class="tarjeta" data-nombre="Shampoo Bexter" data-precio="25.00" data-img="img/bexter.jpg">
+            <a href="shampoo_bexter.html" class="tarjeta-link">
+              <img src="img/bexter.jpg" alt="Shampoo Bexter" />
+            <h3>Shampoo Bexter</h3>
+            <p>
+              Shampoo recomendado para perros mayores a 1 año con sensibilidad
+              en la dermis.
+            </p>
+            </a>
+            <p class="producto-precio">S/ 25.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
 
-      <a href="pethroom.html" class="tarjeta">
-        <img src="img/pethroom.jpg" />
-        <h3>PETHROOM Peine profesional para ojos de mascotas</h3>
-        <p>
-          Removedor de manchas de lágrimas de acero inoxidable para gatos y
-          perros.
-        </p>
-        <button>Comprar</button>
-      </a>
-      <a href="dissknic.html" class="tarjeta">
-        <img src="img/dissknic.jpg" />
-        <h3>DISSKNIC Pelota chirriante indestructible para perros</h3>
-        <p>Juguete interactivo para masticadores agresivos.</p>
-        <button>Comprar</button>
-      </a>
+          <article class="tarjeta" data-nombre="Kit de aseo para mascotas de 6 piezas" data-precio="34.00" data-img="img/augwind.jpg">
+            <a href="kit-aseo.html" class="tarjeta-link">
+              <img src="img/augwind.jpg" alt="Kit de aseo para mascotas" />
+            <h3>Kit de aseo para mascotas de 6 piezas</h3>
+            <p>Guantes de lavado para perros, cepillo de baño para perros.</p>
+            </a>
+            <p class="producto-precio">S/ 34.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
+
+          <article class="tarjeta" data-nombre="IMMHABI 400 toallitas de perros" data-precio="52.00" data-img="img/immhabi.jpg">
+            <a href="immhabi-toallitas.html" class="tarjeta-link">
+              <img src="img/immhabi.jpg" alt="Toallitas para perros" />
+            <h3>IMMHABI 400 toallitas de perros</h3>
+            <p>Hipoalergénicas, limpiadoras y desodorizantes.</p>
+            </a>
+            <p class="producto-precio">S/ 52.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
+
+          <article class="tarjeta" data-nombre="ALLRIER Juguetes para perros" data-precio="41.00" data-img="img/ALLRIER.jpg">
+            <a href="allrier-juguete.html" class="tarjeta-link">
+              <img src="img/ALLRIER.jpg" alt="Juguetes para perros" />
+            <h3>ALLRIER Juguetes para perros</h3>
+            <p>Juguetes interactivos para perros de tira y afloja.</p>
+            </a>
+            <p class="producto-precio">S/ 41.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
+
+          <article class="tarjeta" data-nombre="Bolsas de basura para perros" data-precio="58.00" data-img="img/Greener.jpg">
+            <a href="grenner-bolsas.html" class="tarjeta-link">
+              <img src="img/Greener.jpg" alt="Bolsas para perros" />
+            <h3>Bolsas de basura para perros</h3>
+            <p>100% a prueba de fugas.</p>
+            </a>
+            <p class="producto-precio">S/ 58.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
+
+          <article class="tarjeta" data-nombre="Beebiepet - Arnés táctico" data-precio="99.00" data-img="img/beebiepet.jpg">
+            <a href="beebiepet.html" class="tarjeta-link">
+              <img src="img/beebiepet.jpg" alt="Arnés táctico Beebiepet" />
+            <h3>Beebiepet - Arnés táctico</h3>
+            <p>
+              Resistente para perros grandes, ajustable, antitirones y
+              reflectante.
+            </p>
+            </a>
+            <p class="producto-precio">S/ 99.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
+
+          <article class="tarjeta" data-nombre="Arnés para perro Matilor" data-precio="34.00" data-img="img/Matilor.jpg">
+            <a href="arnes-matilor.html" class="tarjeta-link">
+              <img src="img/Matilor.jpg" alt="Arnés Matilor" />
+            <h3>Arnés para perro Matilor</h3>
+            <p>Transpirable, diseño cómodo para todo tipo de mascota.</p>
+            </a>
+            <p class="producto-precio">S/ 34.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
+
+          <article class="tarjeta" data-nombre="Comotech Cepillo de aseo 3 en 1" data-precio="30.00" data-img="img/comotech.jpg">
+            <a href="comotech.html" class="tarjeta-link">
+              <img src="img/comotech.jpg" alt="Cepillo Comotech" />
+            <h3>Comotech Cepillo de aseo 3 en 1</h3>
+            <p>Cepillo de champú y estropajo con mango ajustable.</p>
+            </a>
+            <p class="producto-precio">S/ 30.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
+
+          <article class="tarjeta" data-nombre="ChomChom Roller Removedor de pelo" data-precio="85.00" data-img="img/Chomchom.jpg">
+            <a href="chomchom.html" class="tarjeta-link">
+              <img src="img/Chomchom.jpg" alt="ChomChom Roller" />
+            <h3>ChomChom Roller Removedor de pelo</h3>
+            <p>Rodillo reutilizable para retirar pelos de perros y gatos.</p>
+            </a>
+            <p class="producto-precio">S/ 85.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
+
+          <article class="tarjeta" data-nombre="PETHROOM Peine profesional" data-precio="34.00" data-img="img/pethroom.jpg">
+            <a href="pethroom.html" class="tarjeta-link">
+              <img src="img/pethroom.jpg" alt="Peine profesional PETHROOM" />
+            <h3>PETHROOM Peine profesional</h3>
+            <p>Removedor de manchas de lágrimas para gatos y perros.</p>
+            </a>
+            <p class="producto-precio">S/ 34.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
+
+          <article class="tarjeta" data-nombre="DISSKNIC Pelota chirriante" data-precio="23.00" data-img="img/dissknic.jpg">
+            <a href="dissknic.html" class="tarjeta-link">
+              <img src="img/dissknic.jpg" alt="Pelota DISSKNIC" />
+            <h3>DISSKNIC Pelota chirriante</h3>
+            <p>Juguete interactivo para perros masticadores fuertes.</p>
+            </a>
+            <p class="producto-precio">S/ 23.00</p>
+            <button type="button" class="btn-add-cart">
+              <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+            </button>
+          </article>
+        </div>
+      </section>
     </main>
 
     <!-- footer -->
@@ -132,7 +210,6 @@
       <div class="footer-contenedor">
         <div class="footer-logo-box">
           <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
-          <p>Estética canina con amor y dedicación.</p>
         </div>
 
         <div class="footer-col">
@@ -187,5 +264,6 @@
         © 2026 Pelucas Caninas - Todos los derechos reservados
       </p>
     </footer>
+      <script src="js/app.js"></script>
   </body>
 </html>

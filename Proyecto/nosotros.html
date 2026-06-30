@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pelucas Caninas - Nosotros</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="css/style-general.css" />
     <link rel="stylesheet" href="css/style-navbar.css" />
     <link rel="stylesheet" href="css/style-footer.css" />
     <link rel="stylesheet" href="css/style-nosotros.css" />
@@ -22,6 +23,12 @@
       <a href="inicio.html" class="logo">
         <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
       </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburguesa">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
       <div class="menu">
         <a href="inicio.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
@@ -29,75 +36,49 @@
         <a href="inicio.html#contactanos">Contáctanos</a>
         <a href="nosotros.html">Nosotros</a>
       </div>
-      <a
-        href="https://wa.me/51937317249?text=Hola!%20Quisiera%20más%20información%20sobre%20sus%20servicios."
-        target="_blank"
-        class="btn-nav"
-      >
-        <i class="fab fa-whatsapp"></i>
-        Agendar Cita
-      </a>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-icon-btn" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="nav-cart-btn" id="cartToggle" aria-label="Abrir carrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cartCount">0</span>
+        </button>
+      </div>
     </nav>
     <!-- SECCIÓN NOSOTROS -->
     <section class="nosotros" id="nosotros">
       <div class="nosotros-contenido">
-        <div class="nosotros-imagen">
-          <img src="img/about us.jpg" alt="Manuel Tirado Groomer Profesional" />
+        <div class="nosotros-texto">
+          <h2>Misión</h2>
+          <div class="linea-titulo"></div>
+          <p>
+            Brindar un servicio de grooming canino profesional, seguro y
+            personalizado, cuidando la higiene, belleza y bienestar de cada
+            mascota con paciencia, cariño y productos de calidad.
+          </p>
+
+          <h2>Visión</h2>
+          <div class="linea-titulo"></div>
+          <p>
+            Ser una peluquería canina reconocida por la confianza, experiencia
+            y trato humano hacia las mascotas, ofreciendo servicios cada vez más
+            completos para las familias de San Juan de Lurigancho.
+          </p>
+
+          <h2>Valores</h2>
+          <div class="linea-titulo"></div>
+          <ul class="valores-lista">
+            <li><i class="fa-solid fa-paw"></i> Amor por las mascotas</li>
+            <li><i class="fa-solid fa-shield-heart"></i> Responsabilidad</li>
+            <li><i class="fa-solid fa-handshake"></i> Confianza</li>
+            <li><i class="fa-solid fa-star"></i> Calidad</li>
+          </ul>
         </div>
 
-        <div class="nosotros-texto">
-          <h2>Quiénes Somos</h2>
-
-          <p>
-            Manuel Tirado es un groomer profesional formado en Argentina, con
-            una amplia experiencia en estética canina y cuidado especializado de
-            mascotas. Durante años se dedicó al baño, corte y tratamiento del
-            pelaje de perros de distintas razas, desarrollando técnicas
-            profesionales y un trato paciente y cariñoso hacia cada mascota.
-          </p>
-
-          <p>
-            En Pelucas Caninas trabajamos con dedicación, responsabilidad y amor
-            por los animales, brindando un servicio personalizado para que cada
-            mascota reciba el cuidado que merece.
-          </p>
-
-          <h2>Nuestra Historia</h2>
-
-          <p>
-            Pelucas Caninas nació gracias al esfuerzo y experiencia de Manuel
-            Tirado, quien trabajó durante casi 20 años realizando cortes y
-            servicios de estética canina a domicilio en Argentina.
-          </p>
-
-          <p>
-            En el año 2021, por motivos personales, decidió regresar al Perú, su
-            país natal. Al llegar, observó que el servicio de grooming a
-            domicilio no era tan viable como en Argentina, por lo que tomó la
-            decisión de abrir su propia peluquería canina.
-          </p>
-
-          <p>
-            El negocio comenzó desde cero, con mucho esfuerzo, dedicación y amor
-            por las mascotas. Poco a poco fue creciendo, adquiriendo mejores
-            herramientas, accesorios y acondicionando el local hasta convertirse
-            en lo que hoy conocemos como Pelucas Caninas.
-          </p>
-
-          <h2>Nuestro Compromiso</h2>
-
-          <p>
-            Nos comprometemos a brindar un servicio seguro, higiénico y de
-            calidad, tratando a cada mascota con paciencia, respeto y cariño.
-            Nuestro objetivo es que cada cliente se sienta tranquilo y confiado
-            al dejar a su engreído en nuestras manos.
-          </p>
-
-          <p>
-            Trabajamos utilizando productos adecuados para cada tipo de pelaje y
-            buscamos siempre resaltar la belleza, limpieza y bienestar de las
-            mascotas en un ambiente cómodo y amigable.
-          </p>
+        <div class="nosotros-imagen">
+          <img src="img/stickernos.png" alt="Mascota con su dueño" />
         </div>
       </div>
     </section>
@@ -107,7 +88,6 @@
       <div class="footer-contenedor">
         <div class="footer-logo-box">
           <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
-          <p>Estética canina con amor y dedicación.</p>
         </div>
 
         <div class="footer-col">
@@ -162,5 +142,6 @@
         © 2026 Pelucas Caninas - Todos los derechos reservados
       </p>
     </footer>
+      <script src="js/app.js"></script>
   </body>
 </html>

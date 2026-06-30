@@ -17,15 +17,9 @@
 .footer-logo-box img {
   width: 200px;
   background: white;
-  padding: 12px;
+  padding: 2px;
   border-radius: 20px;
   margin-bottom: 15px;
-}
-
-.footer-logo-box p {
-  font-size: 15px;
-  line-height: 1.6;
-  opacity: 0.9;
 }
 
 .footer-col h4 {
@@ -67,7 +61,7 @@
 }
 
 .footer-redes-nuevo a:hover {
-  background: #d4a030;
+  background: #ffd166;
   color: #ffffff;
   transform: translateY(-4px);
 }
@@ -133,4 +127,27 @@
   .footer-imagenes {
     align-items: center;
   }
+}
+
+
+/* Iconos de redes visibles en modo oscuro */
+body.dark-mode .footer-redes-nuevo a {
+  background: #ffffff !important;
+  color: #2d7a5f !important;
+  opacity: 1 !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+body.dark-mode .footer-redes-nuevo a i {
+  color: #2d7a5f !important;
+  opacity: 1 !important;
+}
+
+body.dark-mode .footer-redes-nuevo a:hover {
+  background: #ffd166 !important;
+  color: #0b120f !important;
+}
+
+body.dark-mode .footer-redes-nuevo a:hover i {
+  color: #0b120f !important;
 }

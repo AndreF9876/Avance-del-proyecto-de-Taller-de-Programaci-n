@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pelucas Caninas - Servicios</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -12,17 +12,23 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
     />
+    <link rel="stylesheet" href="css/style-general.css" />
     <link rel="stylesheet" href="css/style-navbar.css" />
     <link rel="stylesheet" href="css/style-footer.css" />
     <link rel="stylesheet" href="css/style-servicios.css" />
   </head>
   <body>
-
     <!-- BARRA DE NAVEGACIÓN -->
     <nav class="navbar">
       <a href="inicio.html" class="logo">
         <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
       </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburguesa">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
       <div class="menu">
         <a href="inicio.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
@@ -30,10 +36,16 @@
         <a href="inicio.html#contactanos">Contáctanos</a>
         <a href="nosotros.html">Nosotros</a>
       </div>
-      <a href="https://wa.me/51937317249" target="_blank" class="btn-nav">
-        <i class="fab fa-whatsapp"></i>
-        Agendar Cita
-      </a>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-icon-btn" id="darkModeToggle" aria-label="Cambiar modo oscuro">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button type="button" class="nav-cart-btn" id="cartToggle" aria-label="Abrir carrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cartCount">0</span>
+        </button>
+      </div>
     </nav>
 
     <!-- SERVICIOS -->
@@ -45,7 +57,7 @@
 
       <div class="servicios-grid">
         <div class="servicio-card">
-          <img src="img/baño basico.png" alt="Baño básico" />
+          <img src="img/basico.jpg" alt="Baño básico" />
           <h3>Baño Básico</h3>
           <p class="precio">Servicio esencial</p>
           <ul>
@@ -57,7 +69,7 @@
             <li>Perfume y lazo decorativo</li>
           </ul>
           <a
-            href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Baño%20Básico"
+            href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Baño%20Básico."
             target="_blank"
             class="btn-servicio"
             >Agendar</a
@@ -65,7 +77,7 @@
         </div>
 
         <div class="servicio-card destacado">
-          <img src="img/baño premium.png" alt="Baño premium" />
+          <img src="img/premium.png" alt="Baño premium" />
           <h3>Baño Premium</h3>
           <p class="precio">Más completo</p>
           <ul>
@@ -80,7 +92,7 @@
             <li>Perfume y lazo decorativo</li>
           </ul>
           <a
-            href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Baño%20Premium"
+            href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Baño%20Premium."
             target="_blank"
             class="btn-servicio"
             >Agendar</a
@@ -88,7 +100,7 @@
         </div>
 
         <div class="servicio-card">
-          <img src="img/baño y corte.png" alt="Baño y corte" />
+          <img src="img/corte.jpg" alt="Baño y corte" />
           <h3>Baño y Corte</h3>
           <p class="precio">Estética completa</p>
           <ul>
@@ -99,7 +111,7 @@
             <li>Perfume y lazo decorativo</li>
           </ul>
           <a
-            href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Baño%20y%20Corte"
+            href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Baño%20y%20Corte."
             target="_blank"
             class="btn-servicio"
             >Agendar</a
@@ -112,10 +124,10 @@
 
         <div class="otros-grid">
           <div class="otro-card">
-            <img src="img/cepillado dientes.png" alt="Cepillado" />
+            <img src="img/cepillado.jpg" alt="Cepillado" />
             <h4>Cepillado de dientes</h4>
             <a
-              href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Cepillado%20de%20dientes"
+              href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Cepillado%20de%20dientes."
               target="_blank"
               class="btn-servicio"
             >
@@ -127,7 +139,7 @@
             <img src="img/oidos.png" alt="Limpieza de oídos" />
             <h4>Limpieza de oídos</h4>
             <a
-              href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Limpieza%20y%20depilacion%20de%20oídos"
+              href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Limpieza%20y%20depilacion%20de%20oídos."
               target="_blank"
               class="btn-servicio"
             >
@@ -139,7 +151,7 @@
             <img src="img/glandulas.png" alt="Glándulas perianales" />
             <h4>Limpieza de glándulas perianales</h4>
             <a
-              href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Limpieza%20de%20glándulas%20perianales"
+              href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Limpieza%20de%20glándulas%20perianales."
               target="_blank"
               class="btn-servicio"
             >
@@ -148,10 +160,10 @@
           </div>
 
           <div class="otro-card">
-            <img src="img/uñas.jpg" alt="Corte de uñas" />
+            <img src="img/unas.jpg" alt="Corte de uñas" />
             <h4>Corte y limado de uñas</h4>
             <a
-              href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Corte%20y%20limado%20de%20uñas"
+              href="https://wa.me/51937317249?text=Hola,%20quiero%20información%20acerca%20del%20servicio%20Corte%20y%20limado%20de%20uñas."
               target="_blank"
               class="btn-servicio"
             >
@@ -167,7 +179,6 @@
       <div class="footer-contenedor">
         <div class="footer-logo-box">
           <img src="img/Pelucas Caninas.png" alt="Logo Pelucas Caninas" />
-          <p>Estética canina con amor y dedicación.</p>
         </div>
 
         <div class="footer-col">
@@ -222,5 +233,6 @@
         © 2026 Pelucas Caninas - Todos los derechos reservados
       </p>
     </footer>
+      <script src="js/app.js"></script>
   </body>
 </html>
